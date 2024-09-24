@@ -1,0 +1,20 @@
+apiVersion: tyk.tyk.io/v1alpha1
+kind: SecurityPolicy
+metadata:
+  name: trial-policy
+  namespace: policies-staging
+spec:
+  access_rights_array:
+    - name: httpbin-api
+      namespace: httpbin-staging
+      versions:
+        - Default
+  active: true
+  name: Trial policy (Staging)
+  state: active
+  rate: -1               # Disable rate limiting
+  per: -1
+  throttle_interval: -1  # Disable global throttling
+  throttle_retry_limit: -1 # Disable global retry limit
+  quota_max: -1           # Disable global quota
+  quota_renewal_rate: 60  # Quota renewal rate in seconds (1 minute)

@@ -1,0 +1,20 @@
+apiVersion: tyk.tyk.io/v1alpha1
+kind: SecurityPolicy
+metadata:
+  name: trial-policy
+  namespace: policies
+spec:
+  access_rights_array:
+    - name: httpbin-api
+      namespace: httpbin
+      versions:
+        - Default
+  active: true
+  name: Trial policy (Production)
+  state: active
+  rate: 100
+  per: 60
+  throttle_interval: 500
+  throttle_retry_limit: 3600
+  quota_max: 60
+  quota_renewal_rate: 60

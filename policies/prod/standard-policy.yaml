@@ -1,0 +1,20 @@
+apiVersion: tyk.tyk.io/v1alpha1
+kind: SecurityPolicy
+metadata:
+  name: standard-policy
+  namespace: policies
+spec:
+  access_rights_array:
+    - name: httpbin-api
+      namespace: httpbin
+      versions:
+        - Default
+  active: true
+  name: Standard policy (Production)
+  state: active
+  rate: 500
+  per: 60
+  throttle_interval: 5000
+  throttle_retry_limit: 3600
+  quota_max: -1
+  quota_renewal_rate: 60
