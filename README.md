@@ -65,7 +65,7 @@ Contains ArgoCD application manifests that automate the deployment process.
     
 2. **Set Up the Environment**
     
-    Follow the instructions in the [blog post](#) to set up your staging and production environments using Minikube, Tyk Stack, and ArgoCD.
+    Follow the instructions in the [blog post](https://tyk.io/blog/a-practical-guide-using-tyk-operator-argocd-and-kustomize/) to set up your staging and production environments using Minikube, Tyk Stack, and ArgoCD.
     
 3. **Update ArgoCD Applications**
     
